@@ -5,7 +5,7 @@ License:        GPL-3.0+
 Summary:        Create Simple Man Pages from --help Output
 Url:            http://www.gnu.org/software/help2man/
 Group:          Development/Tools/Doc Generators
-Source:         %{name}-%{version}.tar.bz2
+Source:         %{name}-%{version}.tar.gz
 BuildRequires:  gettext-tools
 BuildRequires:  perl-gettext
 Requires:       perl-gettext
