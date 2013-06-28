@@ -6,6 +6,7 @@ Summary:        Create Simple Man Pages from --help Output
 Url:            http://www.gnu.org/software/help2man/
 Group:          Development/Tools/Doc Generators
 Source:         %{name}-%{version}.tar.gz
+Source1001: 	help2man.manifest
 BuildRequires:  gettext-tools
 BuildRequires:  perl-gettext
 Requires:       perl-gettext
@@ -20,6 +21,7 @@ still providing some useful information.
 
 %prep
 %setup -q
+cp %{SOURCE1001} .
 
 %build
 %configure --enable-nls
@@ -32,6 +34,7 @@ make %{?_smp_mflags}
 
 
 %files -f %{name}.lang
+%manifest %{name}.manifest
 %defattr(-,root,root,-)
 %doc COPYING 
 %{_bindir}/help2man
