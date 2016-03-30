@@ -24,6 +24,9 @@ still providing some useful information.
 cp %{SOURCE1001} .
 
 %build
+export CFLAGS+=" -fvisibility=hidden"
+  export CXXFLAGS+=" -fvisibility=hidden"
+  
 %configure --enable-nls
 make %{?_smp_mflags}
 
